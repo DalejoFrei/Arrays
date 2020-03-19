@@ -1,0 +1,40 @@
+/*
+ * Author: David Freire
+ * A java class whose purpose is to modify arrays in ways that benefit the programmer.
+ */
+//import java.util.Scanner;
+public class arryMod {
+	//method that takes an array, and copies them over to another blank array with the 
+	//new number of elements.
+	public static int[] add(int[] arry, int numElem) {
+		int[] result = new int[numElem];
+		for(int i = 0; i < arry.length; i++) {
+			result[i] = arry[i];
+		}
+		return result;
+	}
+	//Method that prints all elements in a given array
+	public static void printElems(int[] array) {
+		for(int i = 0; i < array.length; i++) {
+			System.out.print(array[i] + ", ");
+		}
+	}
+	//method that prints the elements of the array between the preferred interval.
+	public static void printElems(int[] arry, int start, int end) {
+		for(int i = start; i < end; i++) {
+			System.out.print(arry[i] + ", ");
+		}
+	}
+	//method that copies the elements of an array to the target array.
+	public static void copyArr(int[] arry, int[] copy) {
+		if(copy.length < arry.length) {
+			for(int i = 0; i < copy.length; i++) {
+				arry[i] = copy[i];
+			}
+		}else {
+		for(int i = 0; i < arry.length; i ++) {
+			arry[i] = copy[i];
+		}
+		}
+	}
+}
