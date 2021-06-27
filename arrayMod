@@ -1,11 +1,13 @@
 /*
- * Author: David Freire
+ * Author: David F,
  * A java class whose purpose is to modify arrays in ways that benefit the programmer.
+ * Mainly used in personal and school projects.
  */
-//import java.util.Scanner;
 public class arryMod {
-	//method that takes an array, and copies them over to another blank array with the 
-	//new number of elements.
+	/*
+	 * method that takes an array of ints and copies them over to another blank array with the new number of elements. 
+	 * If no # of elements are specified, automatically adds one more element to the array.
+	 */
 	public static int[] add(int[] arry, int numElem) {
 		int[] result = new int[numElem];
 		for(int i = 0; i < arry.length; i++) {
@@ -13,28 +15,127 @@ public class arryMod {
 		}
 		return result;
 	}
+	public static int[] add(int[] arry) {
+		int[] result = add(arry, arry.length + 1);
+		return result;
+	}
+//end of int arrays
+	
+	
+	/*
+	 * method that takes a string array, and copies its elements to a new array with the specified number of elements. 
+	 * If no numElem is specified, automatically adds 1 element to the array.
+	 */
+	public String[] add(String[] arry, int numElem) {
+		String[] result = new String[numElem];
+		for(int i = 0; i < arry.length; i++) {
+			result[i] = arry[i];
+		}
+		return result;
+	}
+	public String[] add(String[] arry) {
+		String[] result = add(arry, arry.length + 1);
+		return result;
+	}
+//end of string arrays
+	
+	
+	/*
+	 * method that takes a char array, and copies its elements to a new array with the specified number of elements. 
+	 * If no numElem is specified, automatically adds 1 element to the array
+	 */
+	public char[] add(char[] arry, int numElem) {
+		char[] result = new char[numElem];
+		for(int i = 0; i < arry.length; i++) {
+			result[i] = arry[i];
+		}
+		return result;
+	}
+	public char[] add(char[] arry) {
+		char[] result = add(arry, arry.length + 1);
+		return result;
+	}
+//end of char arrays
+	
+	
+	/*
+	 * Method that takes an array of doubles and modifies the size of the array according to the specified number of elements.
+	 * if no number of elements is specified, automatically increase size by 1.
+	 */
+	public double[] add(double[] arry, int numElem) {
+		double[] result = new double[numElem];
+		for(int i = 0; i < arry.length; i++) {
+			result[i] = arry[i];
+		}
+		return result;
+	}
+	public double[] add(double[] arry) {
+		double[] result = add(arry, arry.length + 1);
+		return result;
+	}
+	
+	
+	/*
+	 * Method that takes an array of floats and modifies the size of the array accordingly.
+	 * If no number of elements is specified, automatically increase size by 1. 
+	 */
+	public float[] add(float[] arry, int numElem) {
+		float[] result = new float[numElem];
+		for(int i = 0; i < arry.length; i++) {
+			result[i] = arry[i];
+		}
+		return result;
+	}
+	public float[] add(float[] arry) {
+		float[] result = add(arry, arry.length + 1);
+		return result;
+	}
+	
+	
+	/*
+	 * Method that takes an array of long integers and modifies it accordingly.
+	 * If no number of elements is specified, automatically increase size by 1
+	 */
+	public long[] add(long[] arry, int numElem) {
+		long[] result = new long[numElem];
+		for(int i = 0; i < arry.length; i++) {
+			result[i] = arry[i];
+		}
+		return result;
+	}
+	public long[] add(long[] arry) {
+		long[] result = add(arry, arry.length + 1);
+		return result;
+	}
+	
+	
+/*
+ * Print & copy section
+ */
+	
+	
 	//Method that prints all elements in a given array
 	public static void printElems(int[] array) {
 		for(int i = 0; i < array.length; i++) {
 			System.out.print(array[i] + ", ");
 		}
 	}
-	//method that prints the elements of the array between the preferred interval.
-	public static void printElems(int[] arry, int start, int end) {
+	//method that prints the elements of the array between a specified interval.
+	public void printElems(int[] arry, int start, int end) {
 		for(int i = start; i < end; i++) {
 			System.out.print(arry[i] + ", ");
 		}
 	}
 	//method that copies the elements of an array to the target array.
-	public static void copyArr(int[] arry, int[] copy) {
+	public void copyArr(int[] arry, int[] copy) {
 		if(copy.length < arry.length) {
 			for(int i = 0; i < copy.length; i++) {
 				arry[i] = copy[i];
 			}
 		}else {
-		for(int i = 0; i < arry.length; i ++) {
-			arry[i] = copy[i];
-		}
+			for(int i = 0; i < arry.length; i ++) {
+				arry[i] = copy[i];
+			}
 		}
 	}
 }
